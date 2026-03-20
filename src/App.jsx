@@ -21,9 +21,9 @@ export default function App() {
 
   // Объект с видео для разных целей (замени ID на свои)
   const videoMap = {
-    keep: "https://www.youtube.com/embed/v7AYK77zF90", // Поддержание
-    lose: "https://www.youtube.com/embed/ml6cT4AZdqI", // Похудение
-    gain: "https://www.youtube.com/embed/upLnzm9L9pE"  // Набор
+    keep: "https://www.youtube.com/embed/KeNObkhENKQ", // Поддержание
+    lose: "https://www.youtube.com/embed/UheajlsZ72E", // Похудение
+    gain: "https://www.youtube.com/embed/lu_BObG6dj8"  // Набор
   };
 
   const startAnalysis = async () => {
@@ -202,29 +202,44 @@ export default function App() {
         </section>
 
         {/* --- СЕКЦИЯ: ТРЕНЕРЫ --- */}
-        <section id="trainers" className="mt-32 pt-20">
-          <h2 className="text-4xl font-black mb-12 text-center">КОМАНДА</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="group relative bg-slate-900 p-8 rounded-[2.5rem] border border-slate-800 text-center hover:bg-purple-900/10 transition-all">
-              <div className="w-32 h-32 bg-gradient-to-tr from-purple-600 to-pink-600 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl shadow-xl">👤</div>
-              <h3 className="text-2xl font-black">Ерхан</h3>
-              <p className="text-purple-400 font-bold mb-4">Founder & Lead Developer</p>
-              <p className="text-slate-500 text-sm">Создал архитектуру системы и обучил ИИ понимать ваши цели.</p>
-            </div>
-            <div className="group relative bg-slate-900 p-8 rounded-[2.5rem] border border-slate-800 text-center hover:bg-pink-900/10 transition-all">
-              <div className="w-32 h-32 bg-slate-800 rounded-full mx-auto mb-6 flex items-center justify-center text-4xl border-2 border-pink-500/30 shadow-xl">🤖</div>
-              <h3 className="text-2xl font-black">DeepSeek V3</h3>
-              <p className="text-pink-400 font-bold mb-4">AI Head Coach</p>
-              <p className="text-slate-500 text-sm">Ваш персональный наставник, доступный 24/7 без выходных.</p>
-            </div>
-          </div>
-        </section>
+        {/* --- СЕКЦИЯ: ТРЕНЕРЫ (КОМАНДА) --- */}
+{/* --- СЕКЦИЯ: КОМАНДА (БЕЗ АНИМАЦИИ) --- */}
+<section id="trainers" className="mt-32 pt-20">
+  <h2 className="text-4xl font-black mb-16 text-center tracking-tight text-white">НАША КОМАНДА</h2>
+  
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+    {[
+      { name: "Ерхан", role: "Founder & Lead Developer", desc: "Архитектура системы и логика бэкенда.", icon: "👤", color: "from-purple-600 to-pink-600" },
+      { name: "DeepSeek V3", role: "AI Head Coach", desc: "Персональный ИИ-наставник 24/7.", icon: "🤖", color: "from-slate-700 to-slate-800", border: "border-pink-500/30" },
+      { name: "Саят", role: "UI/UX Дизайнер", desc: "Дизайн в Figma, подбор цветов и шрифтов.", icon: "🎨", color: "from-blue-600 to-cyan-500" },
+      { name: "Адильбек", role: "Frontend Разработчик", desc: "Верстка сайта и адаптивность под мобилки.", icon: "💻", color: "from-green-600 to-teal-500" },
+      { name: "Айтуар", role: "AI / Data Разработчик", desc: "Алгоритмы расчета тренировок и логика ИИ.", icon: "📊", color: "from-orange-600 to-amber-500" },
+      { name: "Диас", role: "Backend Помощник", desc: "Работа с базой данных и оптимизация запросов.", icon: "🗄️", color: "from-indigo-600 to-purple-500" },
+      { name: "Айбек", role: "Тестировщик (QA)", desc: "Поиск багов и проверка всех функций.", icon: "🛠️", color: "from-red-600 to-rose-500" },
+      { name: "Ислам", role: "Контент и Документация", desc: "Описание проекта и тексты для сайта.", icon: "📝", color: "from-yellow-500 to-orange-400" }
+    ].map((member, i) => (
+      <div 
+        key={i}
+        className={`bg-slate-900 p-8 rounded-[2.5rem] border border-slate-800 shadow-xl transition-all hover:-translate-y-2 ${member.border || ''}`}
+      >
+        <div className={`w-24 h-24 bg-gradient-to-tr ${member.color} rounded-full mx-auto mb-6 flex items-center justify-center text-4xl shadow-2xl`}>
+          {member.icon}
+        </div>
+        <h3 className="text-xl font-black text-center text-white">{member.name}</h3>
+        <p className="text-purple-400 font-bold text-center mb-4 uppercase text-[10px] tracking-widest">{member.role}</p>
+        <p className="text-slate-400 text-xs text-center leading-relaxed">
+          {member.desc}
+        </p>
+      </div>
+    ))}
+  </div>
+</section>
 
         {/* --- КОНТАКТЫ / ФУТЕР --- */}
         <footer id="contacts" className="mt-40 py-20 border-t border-slate-900 text-center">
           <h2 className="text-3xl font-black mb-10">СВЯЗАТЬСЯ С НАМИ</h2>
           <div className="flex flex-wrap justify-center gap-8 mb-12">
-            <a href="#" className="flex items-center gap-2 text-slate-400 hover:text-pink-500 transition-colors bg-slate-900 px-6 py-3 rounded-2xl border border-slate-800">
+            <a href="https://www.instagram.com/yerkhann__/" className="flex items-center gap-2 text-slate-400 hover:text-pink-500 transition-colors bg-slate-900 px-6 py-3 rounded-2xl border border-slate-800">
               <Instagram size={20} /> <span>@yerkhann_fitness</span>
             </a>
             <a href="tel:+77071234567" className="flex items-center gap-2 text-slate-400 hover:text-green-500 transition-colors bg-slate-900 px-6 py-3 rounded-2xl border border-slate-800">
@@ -234,7 +249,7 @@ export default function App() {
               <Mail size={20} /> <span>info@ai-fit.kz</span>
             </a>
           </div>
-          <p className="text-slate-600 text-xs font-bold tracking-widest uppercase">© 2026 AI FITNESS PROJECT | DESIGNED BY YERKHAN</p>
+          <p className="text-slate-600 text-xs font-bold tracking-widest uppercase">© 2026 AI FITNESS PROJECT | DESIGNED BY AISERA</p>
         </footer>
       </main>
     </div>

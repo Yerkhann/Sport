@@ -1,16 +1,40 @@
-# React + Vite
+🚀 Проект: AISERA — Твой ИИ-Тренер
+1. В чем проблема?
+Большинство людей бросают спорт, потому что не знают, с чего начать. Личный тренер стоит дорого, а обычные калькуляторы в интернете выдают только скучные цифры, которые ничему не учат.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. Наше решение
+Aisera — это не просто сайт, это «умная» экосистема.
 
-Currently, two official plugins are available:
+Персонализация: Мы объединили математические формулы расчета калорий (Миффлин-Сан Жеор) с мощью искусственного интеллекта.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+DeepSeek AI: Система анализирует твой ИМТ и цели, после чего выдает живой, человеческий совет по тренировкам и питанию.
 
-## React Compiler
+Видео-база: Сайт автоматически подбирает обучающее видео под твою конкретную цель (похудение или набор массы).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+3. Технологический стек (Почему это современно?)
+Проект построен по всем канонам современной разработки:
 
-## Expanding the ESLint configuration
+Frontend: React + Vite (скорость) + Tailwind CSS (стильный Dark Design).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Backend: Python + FastAPI (быстрая обработка данных).
+
+AI: Интеграция с нейросетью через OpenRouter API.
+
+Cloud: Автоматический деплой через GitHub на Vercel и Render.
+
+4. Наша Команда (Dream Team)
+Над проектом работала слаженная группа, где у каждого была своя зона ответственности:
+
+Ерхан: Архитектор и Lead-разработчик.
+
+Саят: UI/UX Дизайн (удобство и стиль).
+
+Адильбек: Frontend (верстка и логика интерфейса).
+
+Айтуар: AI & Data (алгоритмы и работа с нейросетью).
+
+Диас: Backend & DB (серверная часть и данные).
+
+Айбек и Ислам: QA-тестирование и документация проекта.
+
+Итог: Aisera — это мост между сложными данными и реальными результатами в спорте. Красиво, быстро и с искусственным интеллектом в кармане. in your project.
